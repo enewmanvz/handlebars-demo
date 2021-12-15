@@ -7,8 +7,10 @@ let list = document.getElementById('list')
 let menuList = document.getElementById('menu')
 
 menuBtn.addEventListener('click', async () => {
+    const id = window.location.pathname.split('/restaurants/')
+    console.log(id)
     //fetch the menu route from express
-    let res = await fetch('/menu/1')
+    let res = await fetch('/menu/{$id[1]}')
     //parse as json
     let restaurant = await res.json()
     //access Menus in respone
