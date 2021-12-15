@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/styles.css">
+    <link rel="stylesheet" href="../../public/styles.css"/>
+    <link rel="stylesheet" href="/style.css"/>
+
     <title>Restaurant Hub</title>
 </head>
 <body>
+    <div class="dropdown">
+            <button class="dropbtn">Restaurants</button>
+            <div class="dropdown-content">
+                <a href="../restaurants">All Restaurants</a>
+                {{#each restaurantList}}
+                <a href="../restaurants/{{id}}"> {{name}}</a>
+                {{/each}}
+            </div>
+    </div>
+
     <h1>Best Restaurants in Town</h1>
     <h2>Dallas Favorites</h2>
     <h3>You have to try just one!</h3>
 
     {{{body}}}
+   {{!-- // <p data-element-index="" --}}
     
     
 </body>
+<script src="scripts.js"></script>
 </html>

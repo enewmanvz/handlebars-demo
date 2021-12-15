@@ -5,6 +5,7 @@ class MenuItem extends Model {}
 
 MenuItem.init({
     name: DataTypes.STRING,
+    image: DataTypes.STRING,
     price: DataTypes.NUMBER,
 }, {
     sequelize: db,

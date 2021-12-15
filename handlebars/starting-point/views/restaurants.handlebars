@@ -6,7 +6,11 @@
     <article class="clearfix item-container block">
         <h2>{{name}}</h2>
         <img class="item-img" src="{{image}}"/>
-        <a class="btn" href="/restaurants/{{id}}">View Restaurant</a>
+        <a class="btn" href="/restaurants/{{id}}">View List of Restaurants</a>
+        <button id='details-btn'>Show Other Restaurants</button>
+        <button id='menu-btn'>Show Menu</button>
+        <ul id='menu'></ul>
+        <ul id='list'></ul>
     </article>
     {{/each}}
 </section>
